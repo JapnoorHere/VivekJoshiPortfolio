@@ -200,7 +200,7 @@ nav ul li a:hover {
 .about .container .content-left .img-container {
   overflow: hidden;
   border-radius: 10px;
-  height: 45vh;
+  height: 50vh;
 }
 
 .about .container .content-left .img-container img {
@@ -246,6 +246,97 @@ nav ul li a:hover {
 
   .about .container .content-right {
     text-align: center;
+  }
+}
+
+/* 
+* achievements section
+*/
+
+.achievements {
+  background-color: #f0f5f9;
+  padding: 2rem;
+}
+
+.achievements .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.achievements .container-top h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.achievements .container-top h1 span {
+  color: var(--main-color);
+}
+
+.achievements .container-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding-bottom: 2rem;
+}
+
+.achievements .container-bottom .card {
+  padding: 0.8rem;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s linear 0s;
+}
+
+.achievements .container-bottom .card .img-container {
+  height: 320px;
+}
+
+.achievements .container-bottom .card .img-container img {
+  border-radius: 10px 10px 0 0;
+  height: 100%;
+  width: 100%;
+}
+
+.achievements .container-bottom .card h1 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.achievements .container-bottom .card p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.achievements .container-bottom .card:hover {
+  transform: scale(0.97);
+  background-color: #45b6fe;
+  color: white;
+}
+
+/* 
+  & Achievements section media query
+*/
+
+@media screen and (max-width: 1050px) {
+  .achievements .container-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .achievements .container-bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 3rem;
+  }
+
+  .achievements .container-top h1 {
+    font-size: 1.5rem;
   }
 }
 
@@ -316,101 +407,228 @@ nav ul li a:hover {
 }
 
 /* 
-* achievements section
+*social contributions section 
 */
 
-.achievements {
+.social-contributions {
   background-color: rgb(243, 243, 243);
-  padding: 2rem;
 }
 
-.achievements .container{
-  max-width: 1280px;
-  margin: 0 auto;
+.social-contributions .container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.achievements .container-top h1{
-  text-align: center;
+.social-contributions .container .container-top h1 {
   font-size: 2.5rem;
-
+  text-align: center;
 }
 
-.achievements .container-top h1 span{
+.social-contributions .container .container-top span {
   color: var(--main-color);
 }
 
-.achievements .container-bottom{
+.social-contributions .container .container-bottom {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 1.5rem;
- 
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 4rem;
+  padding-bottom: 3rem;
 }
 
-.achievements .container-bottom .card{
-  padding: 0.8rem;
+.social-contributions .container .container-bottom .card {
   background-color: white;
   overflow: hidden;
   border-radius: 10px;
-  transition: all 0.3s linear 0s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.achievements .container-bottom .card .img-container{
-  height: 320px;
+.social-contributions .container .container-bottom .card .img-container {
+  height: 350px;
+  position: relative;
 }
 
-.achievements .container-bottom .card .img-container img{
-  border-radius: 10px 10px 0 0;
+.social-contributions .container .container-bottom .card .img-container img {
   height: 100%;
   width: 100%;
+
 }
 
-.achievements .container-bottom .card h1{
-    font-size: 1.3rem;
-    text-align: center;
+.social-contributions .container .container-bottom .card h1 {
+  font-size: 1.3rem;
+  padding: 10px;
 }
 
-.achievements .container-bottom .card p{
-    font-size: 0.9rem;
-    text-align: center;
-}
-
-.achievements .container-bottom .card:hover{
-  transform: scale(0.97);
-  background-color: #45b6fe;
+.social-contributions .container .container-bottom .card .img-container p{
+  position: absolute;
+  background-color: rgba(255, 107, 255, 0.34);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0;
+  border-radius: 15px 15px 0 0;
+  transition: all 0.3s linear 0s;
+  text-align: center;
+}
+
+.social-contributions .container .container-bottom .card:hover .img-container p{
+  opacity: 1;
 }
 
 
 /* 
-  & Achievements section media query
+& social contributions section media query 
 */
 
-
-@media screen and (max-width:1050px) {
-
-  .achievements .container-bottom {
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    column-gap: 3rem ;
+@media screen and (max-width: 1050px) {
+  .social-contributions .container .container-bottom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
   }
-
+  .social-contributions .container .container-top h1 {
+    font-size: 2rem;
+  }
 }
 
-@media screen and (max-width:687px) {
-
-  .achievements .container-bottom {
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(3,1fr);
-    column-gap: 3rem ;
+@media screen and (max-width: 687px) {
+  .social-contributions .container .container-bottom {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 3rem;
   }
 
-  .achievements .container-top h1{
+  .social-contributions .container .container-bottom .card h1 {
+    font-size: 1rem;
+  }
+
+  .social-contributions .container .container-top h1 {
     font-size: 1.5rem;
   }
 
+  .social-contributions .container .container-bottom .card .img-container p{
+      font-size: 1.2rem;
+  }
 }
 
+/* 
+*contact section 
+*/
 
+.contact {
+  background-color: #f0f5f9;
+}
+
+.contact .container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact .container .container-top h1 {
+  font-size: 2.5rem;
+}
+
+.contact .container .container-top span {
+  color: var(--main-color);
+}
+
+.contact .container .container-bottom {
+  width: 90%;
+  padding: 2rem;
+}
+
+.contact .container .container-bottom form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.contact .container .container-bottom form input {
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+}
+
+.contact .container .container-bottom form textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  resize: none;
+  border-radius: 8px;
+  padding: 1rem;
+  border: none;
+}
+
+.contact .container button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: center;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: #45b6fe;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.contact .container button:hover {
+  color: #45b6fe;
+  background-color: white;
+}
+
+/* 
+&contact section media query 
+*/
+
+@media screen and (max-width: 560px) {
+  .contact .container .container-bottom form {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+  }
+  .contact .container .container-bottom form textarea {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+  }
+
+  .contact .container .container-bottom form input:nth-of-type(2) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .contact .container .container-bottom form input:nth-of-type(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .contact .container .container-bottom form input:nth-of-type(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .contact .container .container-bottom form input:nth-of-type(5) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
