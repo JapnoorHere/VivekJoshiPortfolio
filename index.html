@@ -27,7 +27,7 @@
       </nav>
     </header>
 
-    <section class="home">
+    <section class="home" id="home">
       <div class="container">
         <div class="content-left">
           <h3>Hello, I'm</h3>
@@ -35,7 +35,7 @@
             National Awardee <br />
             Vivek Joshi
           </h1>
-          <button>My CV</button>
+          <a href="https://drive.google.com/file/d/1TsoldDXlumESGaKr518V5jfBDK9BqzQs/view" target="_blank"><button class="cvBtn">My CV</button></a>
         </div>
         <div class="content-right">
           <div class="img-container">
@@ -45,7 +45,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="content-left">
           <div class="img-container">
@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    <section class="achievements">
+    <section class="achievements" id="achievements" >
       <div class="container">
         <div class="container-top">
           <h1>My <span>Achievements</span></h1>
@@ -118,31 +118,36 @@
       </div>
     </section>
 
-    <section class="social-links">
+    <section class="social-links" id="social-links">
       <div class="container">
+        <a href="https://www.youtube.com/@vivek708" target="_blank">
         <div class="social youtube">
           <img src="images/yt.png" alt="" />
           <h2>YOUTUBE</h2>
         </div>
-
+      </a>
+        <a href="https://www.instagram.com/vivekjoshimasoom/" target="_blank">
         <div class="social instagram">
           <img src="images/ig.png" alt="" />
           <h2>INSTAGRAM</h2>
         </div>
-
-        <div class="social fb">
-          <img src="images/fb.png" alt="" />
-          <h2>FACEBOOK</h2>
-        </div>
-
-        <div class="social linkedin`">
+      </a>
+        <a href="https://www.linkedin.com/in/vivek-joshi-a4780b9a/" target="_blank">
+        <div class="social linkedin">
           <img src="images/ld.png" alt="" />
           <h2>LINKEDIN</h2>
         </div>
-      </div>
+      </a>
+        <a href="https://www.facebook.com/vivek.joshi1980" target="_blank">
+        <div class="social facebook">
+          <img src="images/fb.png" alt="" />
+          <h2>FACEBOOK</h2>
+        </div>
+      </a>
+        
     </section>
 
-    <section class="social-contributions">
+    <section class="social-contributions" id="social-contributions">
       <div class="container">
         <div class="container-top">
           <h1>
@@ -150,6 +155,7 @@
           </h1>
         </div>
         <div class="container-bottom">
+          <a href="https://www.linkedin.com/company/madhav-sewa-society/" target="_blank">
           <div class="card">
             <div class="img-container">
               <p>Click here to know more</p>
@@ -157,7 +163,9 @@
             </div>
             <h1>MADHAV SEWA SOCIETY</h1>
           </div>
+        </a>
 
+        <a href="https://www.instagram.com/kickdrugs/" target="_blank">
           <div class="card">
             <div class="img-container">
               <p>Click here to know more</p>
@@ -165,7 +173,9 @@
             </div>
             <h1>KICK DRUGS</h1>
           </div>
+        </a>
 
+        <a href="https://www.instagram.com/vivekjoshimasoom/" target="_blank">
           <div class="card">
             <div class="img-container">
               <p>Click here to know more</p>
@@ -173,6 +183,7 @@
             </div>
             <h1>DISABILITY ACTIVIST</h1>
           </div>
+        </a>
         </div>
       </div>
     </section>
@@ -194,17 +205,19 @@
               name="First Name"
               placeholder="First Name"
               required
+              autocomplete="on"
             />
-            <input type="text" name="Last Name" placeholder="Last Name" />
-            <input type="email" name="Email" placeholder="Email" required />
+            <input type="text" name="Last Name" placeholder="Last Name" autocomplete="on" />
+            <input type="email" name="Email" placeholder="Email" required autocomplete="on" />
             <input
               type="tel"
               name="Phone Number"
               placeholder="Phone Number"
               required
+              autocomplete="on"
             />
             <!-- <input type="text" placeholder="Your Message"> -->
-            <textarea name="Message" placeholder="Your Message"></textarea>
+            <textarea name="Message" placeholder="Your Message" autocomplete="off"></textarea>
             <button type="submit">Send Message</button>
           </form>
         </div>

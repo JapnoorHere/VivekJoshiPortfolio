@@ -7,6 +7,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -106,14 +111,13 @@ nav ul li a:hover {
 
 .home .container {
   height: 85%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  max-width: 1380px;
+  padding-left: 5rem;
+  padding-right: 5rem;
   display: flex;
   margin: 0 auto;
   align-items: center;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .home .container .content-left h3 {
@@ -150,7 +154,7 @@ nav ul li a:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .home {
     margin-top: 2rem;
   }
@@ -200,7 +204,7 @@ nav ul li a:hover {
 .about .container .content-left .img-container {
   overflow: hidden;
   border-radius: 10px;
-  height: 50vh;
+  height: 300px;
 }
 
 .about .container .content-left .img-container img {
@@ -358,7 +362,6 @@ nav ul li a:hover {
 }
 
 .social-links .container .social {
-  justify-self: center;
   height: 10rem;
   width: 10rem;
   display: flex;
@@ -372,9 +375,14 @@ nav ul li a:hover {
   transition: all 0.25s ease-out 0s;
 }
 
+
 .social-links .container .social:hover {
   color: #45b6fe;
   transform: scale(1.03);
+}
+
+.social-links .container a{
+  justify-self: center;
 }
 
 .social-links .container .social img {
